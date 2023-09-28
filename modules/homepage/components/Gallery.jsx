@@ -13,7 +13,7 @@ import Gallery7 from '@/app/assets/gallery12.webp';
 import Gallery2Row1 from '@/app/assets/Lesson1.webp';
 import Gallery2Row2 from '@/app/assets/Gallery5.webp';
 import Gallery2Row3 from '@/app/assets/Gallery4.webp';
-import Gallery2Row4 from '@/app/assets/gallery3.webp';
+import Gallery2Row4 from '@/app/assets/Gallery3.webp';
 import Gallery2Row5 from '@/app/assets/gallery7.webp';
 import Gallery2Row6 from '@/app/assets/gallery8.webp';
 import Gallery2Row7 from '@/app/assets/gallery9.webp';
