@@ -10,7 +10,7 @@ const font = Stardos_Stencil({
   weight: ["400", "700"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "block"
+  display: "swap"
 })
 
 //* Components
