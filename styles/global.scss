@@ -1,0 +1,17 @@
+@import './main.scss';
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $primary_font;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: $pure_b;
+}

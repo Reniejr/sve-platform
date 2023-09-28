@@ -1,0 +1,41 @@
+@import '../../../styles/main.scss';
+
+.about-us{
+    padding-bottom: 3rem;
+
+    .section-content{
+        @include flexBox(column, flex-start, center);
+        position: relative;
+        padding-bottom: 0;
+
+        .logo{
+            position: absolute;
+            width: 70%;
+            height: auto;
+            @include transform(rotate(30deg));
+            opacity: .1;
+            top: -1rem;
+            right: -20%;
+        }
+
+        .about-us-img{
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 2rem auto;
+        }
+
+        .txt-content-row{
+            width: 100%;
+            max-width: 1200px;
+            @include flexBox(row, space-between, flex-start);
+            gap: 4rem;
+
+            .txt-content{
+                width: 50%;
+                font-size: 18px;
+            }
+        }
+    }
+
+}

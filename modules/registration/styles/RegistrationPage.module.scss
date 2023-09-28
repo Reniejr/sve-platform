@@ -1,0 +1,81 @@
+@import '../../../styles/main.scss';
+
+#registration-page{
+    position: relative;
+    background-color: $primary;
+    height: 100%;
+    overflow: hidden;
+    @include flexBox(row, flex-start, stretch);
+    *{
+        @include transition(all .5s ease);
+    }
+
+    .logo-container{
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @include flexBox(column, flex-start, center);
+        z-index: 10;
+
+        .logo{
+            width: 325px;
+            height: auto;
+        }
+
+        .switch-platform-input{
+            padding: .5rem;
+            font-size: 24px;
+            background-color: $primary;
+            border: none;
+            outline: none;
+            margin-top: .5rem;
+            cursor: pointer;
+            
+            .switch-platform-option{
+                background-color: $primary;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .image-container{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        min-height: 100vh;
+        overflow: hidden;
+        top: 0;
+
+        .e-learning-img{
+            width: 100%;
+            height: 100vh;
+            max-height: 100vh;
+            @include filter(saturate(0%));
+            object-fit: cover;
+            opacity: .75;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .img-mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $pure_b_75;
+            backdrop-filter: blur(4px);
+        }
+    }
+    .form-container{
+        width: 50%;
+        position: absolute;
+        height: 100%;
+        min-height: 100vh;
+        top: 0;
+    }
+}

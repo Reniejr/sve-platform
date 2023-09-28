@@ -1,0 +1,34 @@
+@mixin animation($animations...){
+    animation: $animations;
+}
+
+@keyframes slideToLeft {
+    0%{margin-left: 0%}
+    50%{margin-left: -100%}
+    100%{margin-left: 0%}
+}
+
+@keyframes slideToRight {
+    0%{margin-left: -100%}
+    50%{margin-left: 0%}
+    100%{margin-left: -100%}
+}
+
+$slideToLeft: slideToLeft 40s linear infinite;
+$slideToRight: slideToRight 40s linear infinite;
+
+@keyframes scaleMoveDown{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        @include transform(scale(1.05));
+        margin-bottom: -5px;
+    }
+}
+
+$scaleMoveDown: scaleMoveDown 1s linear infinite;

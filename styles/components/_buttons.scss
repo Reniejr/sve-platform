@@ -1,0 +1,31 @@
+.btn{
+
+    @include borderRadius(3px);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .35rem .35rem;
+    cursor: pointer;
+    @include transition(all 0.2s ease);
+
+    &.btn-primary, &.btn-secondary:hover{
+        color: $pure_w;
+        background-color: $pure_b;
+        border: 1px solid $pure_b;
+        
+        .link-text{
+            color: $pure_w;
+        }
+    }
+    
+    &.btn-secondary, &.btn-primary:hover{
+        color: $pure_b;
+        background-color: transparent;
+        border: 1px solid $pure_b;
+        .link-text{
+            color: $pure_b;
+        }
+    }
+}

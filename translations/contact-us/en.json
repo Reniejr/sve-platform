@@ -1,0 +1,21 @@
+{
+    "description_1": "For detailed program information and to enroll fill the contact form.",
+    "description_2": "Join the SVE community on social media to connect with fellow participants and stay connected to the Silicon Valley ecosystem.",
+    "form": {
+        "email_container": {
+            "label": "Email",
+            "placeholder": "Email"
+        },
+        "subject_container": {
+            "label": "Subject",
+            "_1": "E-Learning Platform",
+            "_2": "Business Platform",
+            "_3": "SVE Experience"
+        },
+        "description_container": {
+            "label": "Description",
+            "placeholder": "Tell us what you want to know about"
+        },
+        "submit": "Send"
+    }
+}

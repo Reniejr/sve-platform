@@ -1,0 +1,35 @@
+$primary: #e6e6e6;
+$primary_90: rgba($color: $primary, $alpha: 0.9);
+$primary_75: rgba($color: $primary, $alpha: 0.75);
+$primary_50: rgba($color: $primary, $alpha: 0.50);
+$primary_25: rgba($color: $primary, $alpha: 0.25);
+$primary_10: rgba($color: $primary, $alpha: 0.10);
+$primary_05: rgba($color: $primary, $alpha: 0.05);
+
+
+$pure_b: #000000;
+$pure_b_90: rgba($color: $pure_b, $alpha: 0.9);
+$pure_b_75: rgba($color: $pure_b, $alpha: 0.75);
+$pure_b_50: rgba($color: $pure_b, $alpha: 0.50);
+$pure_b_25: rgba($color: $pure_b, $alpha: 0.25);
+$pure_b_10: rgba($color: $pure_b, $alpha: 0.10);
+$pure_b_05: rgba($color: $pure_b, $alpha: 0.05);
+
+$pure_w: #ffffff;
+$pure_w_90: rgba($color: $pure_w, $alpha: 0.9);
+$pure_w_75: rgba($color: $pure_w, $alpha: 0.75);
+$pure_w_50: rgba($color: $pure_w, $alpha: 0.50);
+$pure_w_25: rgba($color: $pure_w, $alpha: 0.25);
+$pure_w_10: rgba($color: $pure_w, $alpha: 0.10);
+$pure_w_05: rgba($color: $pure_w, $alpha: 0.05);
+
+$danger: #ff3545;
+$info: #18A2B8;
+$success: #28A745;
+$disabled: #6C757D;
+$warning: #FFC107;
+
+$bg_primary: #ffffff;
+$bg_secondary: $primary;
+
+$txt_color: #000000;

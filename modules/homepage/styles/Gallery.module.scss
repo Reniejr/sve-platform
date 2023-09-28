@@ -1,0 +1,111 @@
+@import '../../../styles/main.scss';
+
+.gallery-section{
+    padding-top: 0;
+
+    .section-content{
+        width: 100%;
+        max-width: none;
+        position: relative;
+        .section-mask{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 95%);
+            z-index: 10;
+        }
+        .gallery-container{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+
+            .logo{
+                width: 450px;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+            }
+
+            .row-picture{
+                @include flexBox(row, flex-start, flex-start);
+                gap: 1rem;
+                
+                .gallery-pic{
+                    width: auto;
+                    max-width: 493px;
+                    height: auto;
+                }
+                &:nth-of-type(1){
+                    @include animation($slideToRight);
+                    
+                    .gallery-pic{
+                        &:nth-of-type(2){
+                            height: 260px;
+                            width: auto;
+                        }
+                        &:nth-of-type(3){
+                            height: 366px;
+                            width: auto;
+                        }
+                        &:nth-of-type(4){
+                            height: 280px;
+                            width: auto;
+                        }
+                        &:nth-of-type(5){
+                            height: 360px;
+                            width: auto;
+                        }
+                        &:nth-of-type(6){
+                            height: 300px;
+                            width: auto;
+                        }
+                        &:nth-of-type(7){
+                            height: 420px;
+                            width: auto;
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    align-items: flex-end;
+                    @include animation($slideToLeft);
+                    .gallery-pic{
+                        &:nth-of-type(1){
+                            height: 380px;
+                            width: auto;
+                        }
+                        &:nth-of-type(2){
+                            height: 353px;
+                            width: auto;
+                        }
+                        &:nth-of-type(3){
+                            height: 280px;
+                            width: auto;
+                        }
+                        &:nth-of-type(4){
+                            height: 378px;
+                            width: auto;
+                        }
+                        &:nth-of-type(5){
+                            height: 300px;
+                            width: auto;
+                        }
+                        &:nth-of-type(6){
+                            height: 260px;
+                            width: auto;
+                        }
+                        &:nth-of-type(7){
+                            height: 380px;
+                            width: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

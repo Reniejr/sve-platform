@@ -1,0 +1,82 @@
+@import '../../../styles/main.scss';
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    @include transition(all .3s ease);
+    
+    &.on-top{
+        background-color: $pure_w_05;
+    }
+    
+    &.off-top{
+        background-color: $pure_w_90;
+    }
+
+    .header-content{
+        max-width: 1260px;
+        margin: 0 auto;
+        @include flexBox(row, space-between, center);
+        padding: 10px;
+
+        .header-col{
+            @include flexBox(row, flex-start, center);
+
+            .logo-nav{
+                height: 61px;
+                width: auto;
+                margin-right: 2rem;
+            }
+
+            .nav-link{
+                width: fit-content;
+                margin-right: 1.25rem;
+                text-align: center;
+                padding: 0 3px;
+                margin-bottom: -3px;
+                font-weight: bold;
+                
+                .underline{
+                    width: 100%;
+                    max-width: 0px;
+                    height: 2px;
+                    background-color: $pure_b;
+                    @include transition(all 1s linear);
+                }
+
+                &:hover{
+                    .underline{
+                        max-width: 1000px;
+                    }
+
+                }
+
+                &.selected{
+                    .underline{
+                        max-width: 1000px;
+                    }
+                }
+
+            }
+
+            .login-link{
+                margin-right: 0;
+            }
+
+            .divider{
+                margin: 0 .75rem;
+                border: 1px solid $pure_b;
+                height: 1rem;
+            }
+
+            .btn{
+                padding: 7.5px 15px;
+                font-size: 14px;
+                margin-left: .25rem;
+            }
+        }
+    }
+}

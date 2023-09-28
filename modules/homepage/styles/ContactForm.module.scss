@@ -1,0 +1,51 @@
+@import '../../../styles/main.scss';
+
+.contact-form{
+    @include flexBox(column, flex-start, stretch);
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    .form-row{
+        width: 100%;
+        @include flexBox(row, space-between, stretch);
+        gap: 2rem;
+    }
+
+    .input-container{
+        width: 100%;
+        @include flexBox(column, flex-start, flex-start);
+
+        .label{
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .email-input, .select-input, .textarea-input{
+            padding: .5rem;
+            font-size: 18px;
+            width: 100%;
+            outline: none;
+        }
+
+        .select-input{
+            cursor: pointer;
+        }
+
+        .textarea-input{
+            resize: none;
+        }
+    }
+
+    .btn-submit{
+        background-color: $pure_b;
+        color: $pure_w;
+
+        &:hover{
+            background-color: transparent;
+            color: $pure_b;
+        }
+    }
+
+}

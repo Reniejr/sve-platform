@@ -1,0 +1,119 @@
+@import '../../../styles/main.scss';
+
+.hero{
+    width: 100%;
+    position: relative;
+    @include flexBox(column, center, center);
+    min-height: 98vh;
+    overflow: hidden;
+    
+    .hero-content-text{
+        @include flexBox(column, center, center);
+        z-index: 2;
+
+        .hero-title{
+            font-size: 81px;
+        }
+        .hero-description{
+            font-size: 24px;
+        }
+    }
+
+    .discover-container{
+        width: 80px;
+        height: 100px;
+        z-index: 10;
+        @include flexBox(column, center, center);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+        cursor: pointer;
+
+        svg{
+            width: 45px;
+            height: 45px;
+            @include animation($scaleMoveDown);
+            &:nth-of-type(2){
+                margin-top: -53px;
+            }
+
+            path{
+                stroke: $pure_b;
+                stroke-width: 15px;
+            }
+        }
+
+        .discover{
+            text-transform: uppercase;
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+
+    }
+
+
+    .hero-logo{
+        width: 55%;
+        height: auto;
+        opacity: .25;
+        position: absolute;
+        top: 1rem;
+        right: -5rem;
+        @include transform(rotate(30deg));
+    }
+
+    .hero-bg-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+        height: 100%;
+
+        .hero-bg{
+            width: 100%;
+            height: auto;
+            opacity: .9;
+            margin-top: -15vh;
+            @include transform(scale(1) rotateY(180deg));
+            z-index: 1;
+        }
+
+        .bg-mask{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+                background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.90) 15%, rgba(255,255,255,.30) 100%);
+        }
+    }
+
+    .pictures{
+        position: absolute;
+        bottom: 1rem;
+        &:nth-of-type(3){
+            right: 10%;
+            @include transform(rotate(10deg));
+        }
+        
+        &:nth-of-type(4){
+            left: 10%;
+            @include transform(rotate(-10deg));
+        }
+
+        &:nth-of-type(5){
+            left: 20%;
+            @include transform(rotate(15deg));
+        }
+
+        &:nth-of-type(6){
+            right: 20%;
+            @include transform(rotate(-15deg));
+        }
+    }
+}

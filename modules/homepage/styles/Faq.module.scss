@@ -1,0 +1,81 @@
+@import '../../../styles/main.scss';
+
+.faq-section{
+    background: linear-gradient(0deg, rgba(230,230,230, 0) 0%, rgba(230,230,230,1) 85%, rgba(230,230,230,0) 100%);
+
+    .section-content{
+        @include flexBox(column, flex-start, flex-start);
+        max-width: 1000px;
+        
+        .faqs-container{
+            margin-top: 3rem;
+            @include borderRadius(3px);
+            border: 1px solid $pure_b_25;
+            box-shadow: 0 0 5px $pure_b_10;
+            @include flexBox(column, flex-start, stretch);
+            width: 100%;
+
+            .faq{
+                width: 100%;
+                border-bottom: 1px solid $pure_b_50;
+                @include flexBox(column, flex-start, stretch);
+
+                *{
+                    @include transition(all .2s ease);
+                }
+
+                &:nth-last-of-type(1){
+                    border-bottom: none;
+                }
+
+                .question-container, .answer-container{
+                    width: 100%;
+                    @include flexBox(row, space-between, center);
+
+                    ion-icon{
+                        font-size: 32px;
+                        cursor: pointer;
+                    }
+                }
+
+                .question{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .question-container{
+                    cursor: pointer;
+                    padding: .75rem;
+                    &.selected-question{
+                        background-color: $pure_b;
+                        color: $pure_w;
+                    }
+                    &.not-selected-question{
+                        background-color: transparent;
+                        color: $pure_b_50;
+                    }
+                }
+
+                .answer-container{
+                    overflow: hidden;
+
+                    &.show-answer{
+                        max-height: 1000px;
+                        margin-top: .5rem;
+                        padding: .75rem;
+                    }
+
+                    &.hide-answer{
+                        max-height: 0px;
+                    }
+
+                    .answer{
+                        font-size: 18px;
+                        padding: .5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

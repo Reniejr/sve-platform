@@ -1,0 +1,30 @@
+@import '../../../styles/main.scss';
+
+.footer{
+    background-color: $pure_b;
+    @include flexBox(column, flex-start, center);
+    padding: 2rem 0;
+    color: $pure_w;
+    gap: .5rem;
+
+    .logo{
+        @include filter(invert(100%));
+    }
+
+    .socials-container{
+        @include flexBox(column, flex-start, center);
+        gap: .5rem;
+        margin: 2rem 0;
+
+        .socials{
+            @include flexBox(row, center, center);
+            gap: 1.5rem;
+
+            ion-icon{
+                font-size: 28px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,109 @@
+@import '../../../styles/main.scss';
+
+.our-services{
+    background: linear-gradient(0deg, rgba(230,230,230, 0) 0%, rgba(230,230,230,1) 85%, rgba(230,230,230,0) 100%);
+
+    .section-content{
+        
+        @include flexBox(column, flex-start, flex-start);
+        max-width: 1260px;
+
+        .services-nav{
+            width: 100%;
+            margin-top: 2rem;
+            @include flexBox(row, flex-start, flex-start);
+
+            .service-nav-btn{
+                font-size: 14px;
+                font-weight: bold;
+                width: calc(100% / 3);
+                @include borderRadius(0px);
+
+
+                &.selected, &:hover{
+                    background-color: $pure_b;
+                    color: $pure_w;
+                }
+            }
+        }
+
+        .service-main-topic-container{
+            width: 100%;
+            padding: 2rem 0;
+            font-size: 18px;
+
+            .description-main-service{
+                white-space: pre-wrap;
+                margin-bottom: 2rem;
+            }
+
+            .services-container{
+                @include flexBox(column, flex-start, flex-start);
+                gap: 1rem;
+                
+                .service-card{
+                    @include flexBox(row-reverse, flex-start, stretch);
+                    gap: 1rem;
+                    max-height: fit-content;
+                    height: 100%;
+                    @include transition(all .3s ease);
+
+                    *{
+                        @include transition(all 1s ease);
+                    }
+
+                    &.expand{
+                        max-height: 1000px;
+                    }
+
+                    .side-bar{
+                        width: 4px;
+                        @include borderRadius(9999px);
+                        
+                        &.selected{
+                            background-color: $pure_b;
+                        }
+                        &.not-selected{
+                            background-color: $pure_b_25;
+                        }
+                    }
+
+                    .card-content{
+                        width: 60%;
+                        padding: .5rem 0;
+
+                        .service-title, .service-description{
+                            text-align: end;
+                        }
+
+                        .service-title{
+                            font-size: 28px;
+                            cursor: pointer;
+
+                            &.selected{
+                                color: $pure_b;
+                            }
+                            &.not-selected{
+                                color: $pure_b_50;
+                            }
+                        }
+
+                        .service-description{
+                            overflow: hidden;
+    
+                            &.show{
+                                max-height: 1000px;
+                            }
+    
+                            &.hide{
+                                max-height: 0px;
+                            }
+    
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

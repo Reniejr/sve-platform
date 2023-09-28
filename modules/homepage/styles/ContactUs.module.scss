@@ -1,0 +1,21 @@
+@import '../../../styles/main.scss';
+
+.contact-us-section{
+    padding-top: 0;
+
+    .section-content{
+
+        @include flexBox(column, flex-start, center);
+        max-width: 1000px;
+
+        .logo{
+            margin-bottom: 1rem;
+        }
+
+        .section-description{
+            text-align: center;
+            font-size: 24px;
+            white-space: pre-wrap;
+        }
+    }
+}
