@@ -1,5 +1,8 @@
 import React from 'react'
 
+//*
+import { Stardos_Stencil } from 'next/font/google'
+
 //* Components
 import Hero from '@/modules/homepage/components/Hero';
 import AboutUs from '@/modules/homepage/components/AboutUs';
@@ -13,6 +16,13 @@ import ContactUs from '@/modules/homepage/components/ContactUs';
 //* Styles
 import globals from '@/styles/Main.module.scss';
 import styles from '@/modules/homepage/styles/HomePage.module.scss';
+
+const font = Stardos_Stencil({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "block"
+})
 
 const Home = () => {
   return (
