@@ -7,10 +7,16 @@ import GalleryRow1 from '@/app/assets/Photo5.webp';
 import GalleryRow2 from '@/app/assets/Gallery2.webp';
 import GalleryRow3 from '@/app/assets/Gallery1.webp';
 import GalleryRow4 from '@/app/assets/Gallery6.webp';
+import Gallery5 from '@/app/assets/gallery10.webp';
+import Gallery6 from '@/app/assets/gallery11.webp';
+import Gallery7 from '@/app/assets/gallery12.webp';
 import Gallery2Row1 from '@/app/assets/Lesson1.webp';
 import Gallery2Row2 from '@/app/assets/Gallery5.webp';
 import Gallery2Row3 from '@/app/assets/Gallery4.webp';
-import Gallery2Row4 from '@/app/assets/Gallery3.webp';
+import Gallery2Row4 from '@/app/assets/gallery3.webp';
+import Gallery2Row5 from '@/app/assets/gallery7.webp';
+import Gallery2Row6 from '@/app/assets/gallery8.webp';
+import Gallery2Row7 from '@/app/assets/gallery9.webp';
 
 //* Styles
 import homeStyles from '../styles/HomePage.module.scss';
@@ -23,18 +29,18 @@ const Gallery = () => {
         GalleryRow2,
         GalleryRow3,
         GalleryRow4,
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery7-scaled.jpg",
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery8-scaled.jpg",
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery9-scaled.jpg"
+        GalleryRow5,
+        GalleryRow6,
+        GalleryRow7,
     ]
     const PICTURES2 = [
         Gallery2Row1,
         Gallery2Row2,
         Gallery2Row3,
         Gallery2Row4,
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery10-scaled.jpg",
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery11-scaled.jpg",
-        "http://lms-demo.local/wp-content/uploads/2023/09/gallery12-scaled.jpg"
+        Gallery2Row5,
+        Gallery2Row6,
+        Gallery2Row7,
     ]
 
   return (
