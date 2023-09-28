@@ -8,6 +8,16 @@ import { store } from '@/redux/store';
 //* Translations
 import { NextIntlProvider, IntlErrorCode } from 'next-intl';
 
+//*Font
+import { Stardos_Stencil } from 'next/font/google'
+
+const font = Stardos_Stencil({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "block"
+})
+
 //* NEXTJS INTL FN
 function onError(error) {
     if (process.env.NODE_ENV !== 'production') {
@@ -37,6 +47,11 @@ function myApp({ Component, pageProps }){
           onError={onError}
           getMessageFallback={getMessageFallback}
           >
+            <style jsx global>{`
+              html{
+                font-family: ${font.style.fontFamily}
+              }
+            `}</style>
             <RootLayout>
                 <Component { ...pageProps } />
             </RootLayout>
